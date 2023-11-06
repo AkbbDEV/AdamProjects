@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        #rock, #paper, #scissors{
+        width: 300px;
+          
+        }
+        div{
+            align-content: center;
+            text-align: center;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 0px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700px;
+        }
+        #topbar{
+        color: grey;
+        }
+        #chars{
+            border-width: 4px;
+            border-style: dashed;
+            border-color: rgb(119, 173, 240);
+        }
+    </style>
+</head>
+<body>
+    <div id="topbar"><input type="text" placeholder="name"> <input type="date"> <input type="submit"></div>
+    <div>
+    <p>Rock Paper Scissors</p>
+    <div id="chars">
+    <img src="rock.png" id="rock" onclick="rock()">
+    <img src="paper.png" id="paper" onclick="paper()">
+    <img id="scissors" src="scissors.png" onclick="scissors()">
+    </div>
+    </div>
+<script>
+    
+    function scissors(){
+        let randomNumber = Math.random();
+
+let computerM = '';
+
+if (randomNumber >= 0 && randomNumber < 1 / 3) {
+    computerM = 'rock';
+}else if ( randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+    computerM = 'paper';
+}else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+    computerM = 'scissors';
+}
+
+console.log(computerM);
+
+let result = '';
+
+if (computerM === 'rock') {
+   result = 'You lose.';
+}else if (computerM === 'paper') {
+    result = 'You won.';
+}else if (computerM === 'scissors') {
+    result = 'Tie.';
+}
+switch (result) {
+    case 'Tie.':
+        alert('its a tie');
+        break;
+    case 'You lose.':
+    alert(' you lose, sorry not sorry');
+        break;
+    case 'You won.':
+    alert(' congrats  you won');
+        break;
+}
+    }
+    function paper() {
+        let randomNumber = Math.random();
+
+    let computerM = '';
+
+    if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerM = 'rock';
+    }else if ( randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerM = 'paper';
+    }else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerM = 'scissors';
+    }
+
+    console.log(computerM);
+
+    let result = '';
+
+    if (computerM === 'rock') {
+       result = 'You won.';
+    }else if (computerM === 'paper') {
+        result = 'Tie.';
+    }else if (computerM === 'scissors') {
+        result = 'You lose.';
+    }
+    switch (result) {
+        case 'Tie.':
+            alert('its a tie');
+            break;
+        case 'You lose.':
+        alert(' you lose sorry not sorry');
+            break;
+        case 'You won.':
+        alert(' congrats  you won');
+            break;
+    } 
+    }
+    function rock() {
+        let randomNumber = Math.random();
+
+    let computerM = '';
+
+    if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerM = 'rock';
+    }else if ( randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerM = 'paper';
+    }else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerM = 'scissors';
+    }
+
+    console.log(computerM);
+
+    let result = '';
+
+    if (computerM === 'rock') {
+       result = 'Tie.';
+    }else if (computerM === 'paper') {
+        result = 'You lose.';
+    }else if (computerM === 'scissors') {
+        result = 'You win.';
+    }
+    switch (result) {
+        case 'Tie.':
+            alert('its a tie');
+            break;
+        case 'You lose.':
+        alert(' you lose sorry not sorry');
+            break;
+        case 'You win.':
+        alert(' congrats  you won');
+            break;
+    }
+    }
+</script>
+</body>
+</html>
+
+
